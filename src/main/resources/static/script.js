@@ -28,8 +28,16 @@ function buyTickets() {
         document.getElementById('movieForm').reset();
     }
 
-    if (validateEmail == false) {
-        document.getElementById('emailMsg').innerHTML = 'Invalid Email, Try Again!'
+    if (validateEmail(emailIn) == false) {
+        document.getElementById('emailMessage').innerHTML = 'Invalid Email, Try Again!';
+    }else{
+        document.getElementById('emailMessage').innerHTML = '';
+    }
+
+    if (validatePhone(phoneIn) == false) {
+        document.getElementById('telMessage').innerHTML = 'Invalid Phone, Try Again!';
+    }else{
+        document.getElementById('telMessage').innerHTML = '';
     }
     
     movieArray.forEach(movie => { 
