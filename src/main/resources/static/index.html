@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        
+        <h1>Order Movie Tickets</h1>
+        <form id="movieForm">
+            Movie: 
+            <select id="movieSelector" >
+                <option value="">Choose movie</option>
+                <option value="GoodWillHunting">Good Will Hunting</option>
+                <option value="Cars">Cars</option>
+                <option value="ToyStory">Toy Story</option>
+                <option value="MonstersInc">Monsters Inc</option>
+            </select>
+            <br /><br />
+            Number: 
+            <input type="number" id="number" min="0" value="">
+            <br /><br />
+            First name: 
+            <input type="text" id="firstName" value="" placeholder="James" >
+            <br />
+            Last name: 
+            <input type="text" id="lastName" placeholder="Smith" >
+            <br />
+            Phone: 
+            <input type="tel" placeholder="123-45-678" id="phone" >
+            <br />
+            Email: 
+            <input type="email" placeholder="james.smith@example.com" id="email" >
+            <br />
+            <button onclick="buyTickets()" type="submit" id="buyTicket">Buy tickets</button>
+        </form>
+        <p id="telMessage"></p>
+        <p id="emailMsg"></p>
+        <h2>All tickets</h2>
+        <p id="listTickets"></p>
+        <br />
+        <button onclick="deleteTickets()">Delete all tickets</button>
+        
+
+        
+    </div>
+
+    <style>
+        body {
+            line-height: 2;
+        }
+        #container{
+            border: 2px solid blue;
+            padding: 10px;
+            width: 25%;    
+            min-width: 310px;    
+        }
+        input, select {
+            position: absolute;
+            left: 130px;
+
+        }
+        #number{
+            width: 40px;
+        }
+    </style>  
+    
+</body>
+</html>
