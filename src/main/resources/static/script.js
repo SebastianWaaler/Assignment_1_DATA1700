@@ -23,6 +23,30 @@ function buyTickets() {
         email: emailIn
     };
 
+    if (movieIn.length == 0) {
+        document.getElementById('selectMessage').innerHTML = 'Movie not selected!';
+    }else{
+        document.getElementById('selectMessage').innerHTML = '';
+    }
+
+    if (numberIn == '') {
+        document.getElementById('numMessage').innerHTML = "Choose number of people!";
+    }else{
+        document.getElementById('numMessage').innerHTML = "";
+    }
+
+    if (firstNameIn == '') {
+        document.getElementById('firstNameMessage').innerHTML = "First name is required!";
+    }else{
+        document.getElementById('firstNameMessage').innerHTML = "";
+    }
+
+    if (lastNameIn == '') {
+        document.getElementById('lastNameMessage').innerHTML = 'Last name is required!';
+    }else{
+        document.getElementById('lastNameMessage').innerHTML = '';
+    }
+
     if (validateEmail(emailIn) && validatePhone(phoneIn) && emailIn != "" && phoneIn != "") {
         movieArray.push(movieInfo);   
         document.getElementById('movieForm').reset();
